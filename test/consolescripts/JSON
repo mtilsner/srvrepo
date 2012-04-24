@@ -1,0 +1,39 @@
+import net.sf.json.groovy.*
+
+def builder = new JsonGroovyBuilder()
+builder { [
+service:1,
+method:"GET",
+request:[
+    headers:[
+        host:"localhost:8090",
+        connection:"keep-alive",
+        "cache-control":"max-age=0",
+        "user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_7) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.57 Safari/534.24",
+        accept:"application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5",
+        "accept-encoding":"gzip,deflate,sdch, accept-language:de-DE,de;q=0.8,en-US;q=0.6,en;q=0.4",
+        "accept-charset":"ISO-8859-1,utf-8;q=0.7,*;q=0.3"
+    ],
+    time:"Tue May 03 15:36:18 CEST 2011"
+],
+response:[
+    headers:[
+        Via:"1.1 CAS-33-ISA2",
+        Connection:"Keep-Alive",
+        "Proxy-Connection":"Keep-Alive",
+        "Content-Length":36,
+        Date:"Tue, 03 May 2011 13:36:18 GMT",
+       " Content-Type":"text/plain; charset=utf-8",
+        "Cache-Control":"private",
+        Vary:"Accept-Encoding",
+        "Keep-Alive":"timeout=2, max=150"
+    ],
+    time:"Tue May 03 15:36:18 CEST 2011",
+    status:200,
+    body:"Invalid Paramters / Values provided!"
+]] }
+/*
+def json = cal as JSONObject
+
+println(json.toString())
+*/

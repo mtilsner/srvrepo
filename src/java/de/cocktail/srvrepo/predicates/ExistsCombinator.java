@@ -31,7 +31,7 @@ public class ExistsCombinator implements Formula {
 	}
 
 	public String toString() {
-		return "∃"+getVariable()+"("+getFormula()+")";
+		return "∃"+getVariable()+".("+getFormula()+")";
 	}
 	public boolean equals(Formula other) {
 		return (other instanceof ExistsCombinator) && ((ExistsCombinator) other).getFormula().equals(getFormula())
